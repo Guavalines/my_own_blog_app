@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+  get 'admin/posts'
+  get 'admin/comments'
+  get 'admin/users'
+  get 'admin/show_post'
   get 'search', to: 'search#index'
   resources :projects
   patch 'drag/project'

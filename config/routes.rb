@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'admin/index'
+  get 'admin', to: 'admin#index'
   get 'admin/posts'
   get 'admin/comments'
   get 'admin/users'

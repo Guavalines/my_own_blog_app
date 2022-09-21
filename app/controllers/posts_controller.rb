@@ -65,7 +65,7 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.friendly.find(params[:id])
+    @post = Post.find(params[:id])
 
     redirect_to @post, status: :moved_permanently if params[:id] != @post.slug
   end

@@ -27,7 +27,6 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.update(comment_params)
         format.html { redirect_to post_url(@post), notice: 'Comment has been updated' }
-
       else
         format.html { redirect_to post_url(@post), alert: 'Comment was not updated!' }
       end
@@ -37,7 +36,7 @@ class CommentsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:post_id])
+    @post = Post.friendly.find(params[:post_id])
   end
 
   def comment_params

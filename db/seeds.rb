@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
 User.create(email: 'joel@example.com',
             password: 'password',
             password_confirmation: 'password',
@@ -16,14 +15,16 @@ User.create(email: 'john@doe.com',
             password_confirmation: 'password',
             name: 'John Doe')
 
-10.times do |x|
+
+100.times do |x|
+  puts "Creating post #{x}"
   post = Post.create(title: "Title #{x}",
                      body: "Body #{x} Words go here Idk",
                      user_id: User.first.id)
 
-  5.times do |y|
-    Comment.create(body: "Comment #{y}",
-                   user_id: User.second.id,
-                   post_id: post.id)
+  2.times do |y|
+    puts "Creating comment #{y} for post #{x}"
+    post.comments.create(body: "Comment #{y}",
+                   user_id: User.second.id)
   end
 end

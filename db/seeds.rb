@@ -15,6 +15,9 @@ User.create(email: 'john@doe.com',
             password_confirmation: 'password',
             name: 'John Doe')
 
+  posts = []
+  comments = []
+
   elapsed = Benchmark.measure do
   100.times do |x|
     puts "Creating post #{x}"
@@ -29,3 +32,4 @@ User.create(email: 'john@doe.com',
     end
   end
 end
+puts "Elapsed time is #{elapsed.real} seconds"

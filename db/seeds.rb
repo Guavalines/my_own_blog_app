@@ -19,17 +19,22 @@ User.create(email: 'john@doe.com',
   comments = []
 
   elapsed = Benchmark.measure do
-  100.times do |x|
+  1000.times do |x|
     puts "Creating post #{x}"
-    post = Post.create(title: "Title #{x}",
+    post = Post.new(title: "Title #{x}",
                        body: "Body #{x} Words go here Idk",
                        user_id: User.first.id)
-
-    2.times do |y|
+    posts.push(post)
+    10.times do |y|
       puts "Creating comment #{y} for post #{x}"
-      post.comments.create(body: "Comment #{y}",
+      comment = post.comments.new(body: "Comment #{y}",
                      user_id: User.second.id)
+      comments.push(comment)
     end
   end
 end
+
+Post.import(posts)
+Comment.import(comments)
+
 puts "Elapsed time is #{elapsed.real} seconds"

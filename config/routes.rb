@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get 'admin/posts'
     get 'admin/comments'
     get 'admin/users'
-    get 'admin/post/:id', to: "admin#show_post", as: 'admin_post'
+    get 'admin/post/:id', to: 'admin#show_post', as: 'admin_post'
   end
 
   get 'search', to: 'search#index'

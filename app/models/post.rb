@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   has_rich_text :body
   # belongs_to :category
 
-  has_many_attached :images
+  # has_many_attached :images
 
   belongs_to :user
   has_many :comments, dependent: :destroy

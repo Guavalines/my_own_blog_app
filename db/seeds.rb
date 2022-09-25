@@ -19,7 +19,7 @@ User.create(email: 'john@doe.com',
   comments = []
 
   elapsed = Benchmark.measure do
-  1000.times do |x|
+  10.times do |x|
     puts "Creating post #{x}"
     post = Post.new(title: "Title #{x}",
                        body: "Body #{x} Words go here Idk",

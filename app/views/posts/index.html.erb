@@ -1,13 +1,15 @@
-<p style="color: green"><%= notice %></p>
-<div class="container">
-  <h1>Posts</h1>
-  <div id="posts" class="container">
-    <% @posts.each do |post| %>
-      <%= render post %>
-      <p>
-        <%= link_to "Show this post", post %>
-      </p>
-    <% end %>
+<div id="posts" class="row row-cols-1 row-cols-md-2 g-4">
+    <h1>Posts</h1>
+  <% @posts.each do |post| %>
+  <div class="col">
+    <div class="card">
+      <img class="rounded-circle" width="100" alt="blog image" <%=image_tag("blogpic.jpg")%>
+      <div class="card-body">
+        <%= render post %>
+          <p class="card-text"><%= link_to "Show this post", post %></p>
+      </div>
+        <% end %>
+    </div>
   </div>
-  <%= link_to "New post", new_post_path %>
+    <%= link_to "New post", new_post_path %>
 </div>

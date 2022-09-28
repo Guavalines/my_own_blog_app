@@ -1,13 +1,18 @@
-<div class="container">
-  <div class="d-flex">
-    <img class="rounded-circle" width="200" <%=image_tag("JoelLW 2.jpg")%>
-    <h1>I'm Joel. I make web applications.</h1>
+<div class="card mb-3" style="max-width: 800px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img class="rounded-circle" width="200" <%=image_tag("JoelLW 2.jpg")%>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">I'm Joel. I make web applications.</h5>
+        <p class="card-text">I create articles for aspiring developers.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
   </div>
-  <div class="d-flex justify-content-center">
-    <hr class="mx-5 w-25">
-  </div>
-  <p>I create articles for aspiring developers.</p>
 </div>
+
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
@@ -18,6 +23,7 @@
       </div>
     </div>
   </div>
+
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -28,6 +34,7 @@
     </div>
   </div>
 </div>
+
 <div class=“text-end”>
     <%= link_to "About Me", about_path, class: "btn btn-secondary" %>
     <%= link_to "Blog", posts_path, class: "btn btn-primary" %>

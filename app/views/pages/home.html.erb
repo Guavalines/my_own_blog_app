@@ -1,7 +1,7 @@
-<div class="card mb-3" style="max-width: 800px;">
+<div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-4">
-      <img class="rounded-circle" width="200" <%=image_tag("JoelLW 2.jpg")%>
+      <img class="img-thumbnail" width="200" <%=image_tag("JoelLW 2.jpg")%>
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -13,17 +13,16 @@
   </div>
 </div>
 
-<div class="row">
+<div class="card mb-3">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Ruby For Beginners</h5>
-        <p class="card-text">This blog entry explores common mistakes beginners meet when they begin coding in Ruby</p>
+        <h5 class="card-title">HTML in only minutes</h5>
+        <p class="card-text">Find HTML Sortcuts!</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
-
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -35,7 +34,51 @@
   </div>
 </div>
 
-<div class=“text-end”>
-    <%= link_to "About Me", about_path, class: "btn btn-secondary" %>
-    <%= link_to "Blog", posts_path, class: "btn btn-primary" %>
+<div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-body text-success">
+    <h5 class="card-title">Success card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">Footer</div>
 </div>
+
+<div class="card-group">
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+
+<div class=“text-end”>
+  <h5>Recent Articles</h1>
+  <%= link_to "view all ->", posts_path, class: "btn btn-primary" %>
+</div>
+
+    <%# <%= link_to "About Me", about_path, class: "btn btn-secondary" %>

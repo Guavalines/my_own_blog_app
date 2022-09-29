@@ -3,7 +3,7 @@
   <% @posts.each do |post| %>
   <div class="col">
     <div class="card">
-      <img class="rounded-circle" width="100" alt="blog image" <%=image_tag("blogpic.jpg")%>
+      <img class="img-thumbnail" width="400" alt="blog image" <%=image_tag("blogpic.jpg")%>
       <div class="card-body">
         <%= render post %>
           <p class="card-text"><%= link_to "Show this post", post %></p>

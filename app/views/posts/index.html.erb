@@ -1,5 +1,6 @@
 <div id="posts" class="row row-cols-1 row-cols-md-2 g-4">
     <h1>Posts</h1>
+</div>
   <% @posts.each do |post| %>
   <div class="col">
     <div class="card">
@@ -12,4 +13,3 @@
     </div>
   </div>
     <%= link_to "New post", new_post_path %>
-</div>

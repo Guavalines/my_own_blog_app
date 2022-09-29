@@ -1,86 +1,91 @@
-<div class="card mb-3">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img class="border border-dark border-5" width="200" <%=image_tag("JoelLW 2.jpg")%>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">I'm Joel. I make web applications.</h5>
-        <p class="card-text">I create articles for aspiring developers.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="container mt-5">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="border border-dark border-5" width="200" <%=image_tag("JoelLW 2.jpg")%>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">I'm Joel. I make web applications.</h5>
+          <p class="card-text">I create articles for aspiring developers.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="card mb-3">
-  <div class="col-sm-6">
+
+  <div class=“text-end”>
+    <h5>Recent Articles</h1>
+    <%= link_to "view all ->", posts_path, class: "btn" %>
+  </div>
+
+  <div class="card mb-3">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">HTML in only minutes</h5>
+          <p class="card-text">Find HTML Sortcuts!</p>
+          <a href="#" class="btn">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Javascript Made Easy</h5>
+          <p class="card-text">Dive into JS Sortcuts!</p>
+          <a href="#" class="btn">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-bg-light p-3">Light with contrasting color</div>
+  <div class="text-bg-dark p-3">Dark with contrasting color</div>
+  <%# <div class="card card-dark bg-dark" style="max-width: 18rem;"> %>
+  <div class="card border-success mb-3" style="max-width: 18rem;">
+    <div class="card-header bg-dark border-success">Header</div>
+    <div class="card-body text-success">
+      <h5 class="card-title">Success card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <div class="card-footer bg-dark border-success">Footer</div>
+  </div>
+
+  <div class="card-group">
     <div class="card">
+      <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">HTML in only minutes</h5>
-        <p class="card-text">Find HTML Sortcuts!</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
     <div class="card">
+      <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Javascript Made Easy</h5>
-        <p class="card-text">Dive into JS Sortcuts!</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
-  </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
 </div>
 
-<div class="text-bg-light p-3">Light with contrasting color</div>
-<div class="text-bg-dark p-3">Dark with contrasting color</div>
-<%# <div class="card card-dark bg-dark" style="max-width: 18rem;"> %>
-<div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-dark border-success">Header</div>
-  <div class="card-body text-success">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <div class="card-footer bg-dark border-success">Footer</div>
-</div>
 
-<div class="card-group">
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
 
-<div class=“text-end”>
-  <h5>Recent Articles</h1>
-  <%= link_to "view all ->", posts_path, class: "btn btn-primary" %>
-</div>
 
     <%# <%= link_to "About Me", about_path, class: "btn btn-secondary" %>

@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   patch 'drag/project'
   get 'members/dashboard'
   resources :categories
-  authenticated :user, ->(user) { user.admin? } do
+  # authenticated :user, ->(user) { user.admin? } do
     get 'admin', to: 'admin#index'
     get 'admin/posts'
     get 'admin/comments'
     get 'admin/users'
     get 'admin/post/:id', to: 'admin#show_post', as: 'admin_post'
-  end
+  # end
 
   get 'search', to: 'search#index'
 

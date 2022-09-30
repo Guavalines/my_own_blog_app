@@ -14,36 +14,14 @@
     </div>
   </div>
 
-  <div class=“text-end”>
+ <div class="container mb-2">
     <h5>Recent Articles</h1>
     <%= link_to "view all ->", posts_path, class: "btn" %>
   </div>
 
-
   <div class="card-group">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">HTML in only minutes</h5>
-          <p class="card-text">Find HTML Shortcuts!</p>
-          <a href="#" class="btn">read article</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Javascript Made Easy</h5>
-          <p class="card-text">Dive into JS Shortcuts!</p>
-          <a href="#" class="btn">read article</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-group">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card border-dark border-5">
+      <img class="card-img-top" width="200" <%=image_tag("yoga.png")%>
       <div class="card-body">
         <h5 class="card-title">Yoga for coders</h5>
         <p class="card-text">14 Yoga Poses That Promise Soothing Relief If You're Hunched Over a Computer All Day</p>
@@ -52,8 +30,8 @@
         <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card border-dark border-5">
+       <img class="card-img-top" width="200" <%=image_tag("function.png")%>
       <div class="card-body">
         <h5 class="card-title">What are Functions</h5>
         <p class="card-text">Functions are "self contained" modules of code that accomplish a specific task. </p>
@@ -62,8 +40,8 @@
         <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card border-dark border-5">
+      <img class="card-img-top" width="200" <%=image_tag("schools.png")%>
       <div class="card-body">
         <h5 class="card-title">Best Coding Bootcamps</h5>
         <p class="card-text">The best online coding bootcamps right now.</p>

@@ -15,21 +15,20 @@
     <p class="card-text">I create articles for aspiring developers.</p>
   </div>
 
-<div>
-    <% Post.all.each do |post| %>
-      <div class="card-group">
-        <div class="card border-dark border-5">
-          <h2 class="card-title"> <%= post.title %> </h2>
-          <p class="card-text"> <%= post.body %> </p>
-        </div>
-      </div>
-    <% end %>
-</div>
-
  <div class="container mb-2">
     <h5>Recent Articles</h1>
     <%= link_to "view all ->", posts_path, class: "btn" %>
   </div>
+
+<div class="card-group">
+  <% Post.limit(4).each do |post| %>
+    <div class="card border-dark border-5">
+      <h2 class="card-title"> <%= post.title %> </h2>
+      <p class="card-text"> <%= post.body %> </p>
+    </div>
+  <% end %>
+</div>
+
 
   <div class="card-group">
     <div class="card border-dark border-5">

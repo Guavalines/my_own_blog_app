@@ -13,7 +13,7 @@
 </div>
 
  <div class="container mb-2">
-    <h5>Recent Articles</h1>
+    <h5>Recent Articles</h5>
     <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
   </div>
 
@@ -24,7 +24,7 @@
       <h2 class="card-title"> <%= post.title %> </h2>
       <%# <p class="card-text"> <%= post.body %>
        <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Last updated <%= time_ago_in_words(post.updated_at) %> ago</small>
       </div>
     </div>
   <% end %>

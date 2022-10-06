@@ -6,3 +6,12 @@ a:link, a:visited {
   text-decoration: none;
   display: inline-block;
   }
+
+  /* hr {
+  size: 2;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  background-color:black;
+  } */

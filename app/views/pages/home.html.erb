@@ -1,36 +1,38 @@
 
 <div class="border border-dark border-5">
-<div class="text-center">
-<div>
-    <img class="border border-light border-5 mt-5 mb-3" width="200" <%=image_tag("JoelLW 2.jpg")%>
-</div>
-
-<div class="container-fluid">
-   <div class="text-center">
-      <h5>I'm Joel. I make web applications.</h5>
-    </div>
-</div>
-<div class="text-center">
-  <p>I create articles for aspiring developers.</p>
-</div>
-
- <div class="container mb-2">
-    <h5>Recent Articles</h5>
-    <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
+  <div class="text-center">
+  <span class="border border-dark border-5">
+      <img class="border border-light border-5 mt-5 mb-3" width="200" <%=image_tag("JoelLW 2.jpg")%>
+  </span>
   </div>
 
-<div class="card-group">
-  <% Post.limit(3).each do |post| %>
-    <div class="card border-dark border-5">
-      <img class="card-img-top" width="200" <%=image_tag("yoga.png")%>
-      <h2 class="card-title"> <%= post.title %> </h2>
-      <%# <p class="card-text"> <%= post.body %>
-       <div class="card-footer">
-      <small class="text-muted">Last updated <%= time_ago_in_words(post.updated_at) %> ago</small>
-      </div>
+  <div class="container-fluid">
+    <div class="text-center">
+      <h1>I'm Joel. I make web applications.</h1>
     </div>
-  <% end %>
-</div>
+  </div>
+  <hr class="bg-dark border-3 border-top border-dark">
+  <div class="text-center">
+  <p>I create articles for aspiring developers.</p>
+  </div>
+
+  <div class="container mb-2">
+      <h5>Recent Articles</h5>
+      <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
+    </div>
+
+  <div class="card-group">
+    <% Post.limit(3).each do |post| %>
+      <div class="card border-dark border-5">
+        <img class="card-img-top" width="200" <%=image_tag("yoga.png")%>
+        <h2 class="card-title"> <%= post.title %> </h2>
+        <%# <p class="card-text"> <%= post.body %>
+        <div class="card-footer">
+        <small class="text-muted">Last updated <%= time_ago_in_words(post.updated_at) %> ago</small>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 

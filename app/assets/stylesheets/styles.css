@@ -1,5 +1,4 @@
 a:link, a:visited {
-  color: #ffffff;
   padding: 0px 0px;
   text-align: center;
   text-decoration: none;
@@ -55,3 +54,16 @@ html * {
   color:black;
   text-decoration: none;
 } */
+
+#nav-bottom-decor-1 {
+  background-color:rgb(126, 28, 230);
+  height:5px;
+}
+#nav-bottom-decor-2 {
+  background-color:rgb(230, 136, 28);
+  height:5px;
+}
+#nav-bottom-decor-3 {
+  background-color:rgb(220, 230, 28);
+  height:5px;
+}

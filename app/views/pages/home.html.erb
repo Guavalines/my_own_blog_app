@@ -1,7 +1,6 @@
 
 <div class="border border-dark border-5">
   <div class="text-center">
-    <span class="border border-dark border-5">
       <img class="borders border-5 mt-5 mb-3" width="200" <%=image_tag("JoelLW 2.jpg")%>
     </span>
   </div>
@@ -19,7 +18,7 @@
   <div class="container mb-2">
       <h5>Recent Articles</h5>
       <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
-    </div>
+  </div>
 
   <div class="card-group">
     <% Post.limit(3).each do |post| %>

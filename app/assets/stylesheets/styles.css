@@ -7,11 +7,19 @@ a:link, a:visited {
   display: inline-block;
   }
 
-  /* hr {
+  hr {
   size: 2;
-  width: 500px;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   height: 500px;
   background-color:black;
-  } */
+  }
+
+  .special-green {
+  background: rgb(28, 230, 186);
+  display: inline;
+  padding: none;
+  color: #000000;
+  box-shadow: none;
+  }

@@ -41,3 +41,7 @@ a:hover {
 html * {
   font-family: Georgia, serif;
 }
+.borders{
+  border: 3px solid white;
+  outline: 4px solid black;
+   }

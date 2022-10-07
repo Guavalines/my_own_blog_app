@@ -37,3 +37,7 @@ a:hover {
   background:#000000;
   color:#ffffff;
 }
+
+html * {
+  font-family: Georgia, serif;
+}

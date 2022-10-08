@@ -1,5 +1,5 @@
 
-<div class="border border-dark border-5 border-top-0">
+<div class="border border-dark border-5 border-top-0 px-5">
   <div class="text-center">
       <img class="borders border-5 mt-5 mb-3" width="200" <%=image_tag("JoelLW 2.jpg")%>
     </span>
@@ -21,7 +21,7 @@
   </div>
 
   <div class="card-group">
-    <% Post.limit(3).each do |post| %>
+    <% Post.limit(2).each do |post| %>
       <div class="card border-dark border-5">
         <img class="card-img-top" width="200" <%=image_tag("yoga.png")%>
         <h2 class="card-title"> <%= post.title %> </h2>
@@ -33,21 +33,3 @@
     <% end %>
   </div>
 </div>
-
-
-  <%# <div class="card-group">
-    <div class="card border-dark border-5">
-      <img class="card-img-top" width="200" <%=image_tag("yoga.png")%>
-      <%# <div class="card-body">
-        <h5 class="card-title">Yoga for coders</h5>
-        <p class="card-text">14 Yoga Poses That Promise Soothing Relief If You're Hunched Over a Computer All Day</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div> %>
-
-
-
-    <%# <%= link_to "About Me", about_path, class: "btn btn-secondary" %>

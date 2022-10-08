@@ -17,7 +17,7 @@
         comments_edit_param: "edit-button-#{comment.id}"
       },
       id: "edit-button-#{comment.id}" %>
-      <%= button_to "Delete", [post, comment], class: "btn btn-danger", method: :delete %>
+      <%= button_to "Delete", [post, comment], class: "btn btn-danger mx-1", method: :delete %>
     </div>
     <div id="edit-form-<%= comment.id%>" class="d-none">
         <%= render 'comments/form',

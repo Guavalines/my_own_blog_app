@@ -10,44 +10,35 @@
       <h1 class="intro-text"><span>I'm Joel. I make web apps with <span class="special-green">Ruby on Rails</span><span>, </span><span class="special-green">Javascript</span>, & <span class="special-green">CSS</span>. I also write <span class="special-green">articles</span><span> on </span><span class="special-green">software development</span><span>.</span></h1>
     </div>
   </div>
+
   <hr>
+
   <div class="text-center">
-  <p>I create articles for aspiring developers.</p>
+    <p>I create articles for aspiring developers.</p>
   </div>
 
   <div class="container mb-2">
-      <h5>Recent Articles</h5>
-      <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
+    <h5>Recent Articles</h5>
+    <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
   </div>
 
-  <div class="card-group mb-5">
+  <div class="card">
     <% Post.limit(2).each do |post| %>
-      <div class="card border-dark border-5 mx-5">
-        <img class="card-img-top" width="200" <%=image_tag("yoga.png")%>
-        <h2 class="card-title"> <%= post.title %> </h2>
-        <%# <p class="card-text"> <%= post.body %>
-        <div class="card-footer">
-        <small class="text-muted">Last updated <%= time_ago_in_words(post.updated_at) %> ago</small>
-        </div>
-      </div>
+      <%= render post %>
     <% end %>
   </div>
 
-  <div id="posts" class="row row-cols-1 row-cols-md-2 g-4 mt-4 mx-4">
-  <% Post.limit(2).each do |post| %>
-  <div class="col">
-    <div class="card-center">
-      <img class="img-thumbnail" width="400" alt="blog image" <%=image_tag("yoga.png")%>
-      <div class="card-body">
-        <%= render post %>
-          <p class="card-text"><%= link_to "Show this post", post %></p>
-      </div>
+  <div class="card" style="width: 300px;">
+    <img <%=image_tag("yoga.png")%>
+    <div class="card-body text-center">
+        <h5 class="card-title">Alice Liddel</h5>
+        <p class="card-text">Alice is a freelance web designer and developer based in London. She is specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
+        <a href="#" class="btn btn-primary stretched-link">View Profile</a>
     </div>
   </div>
-        <% end %>
-</div>
-</div>
 
+
+</div>
 
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->

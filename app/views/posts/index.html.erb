@@ -9,7 +9,6 @@
   <% @posts.each do |post| %>
   <div class="col">
     <div class="card-center">
-      <img class="img-thumbnail" width="400" alt="blog image" <%=image_tag("yoga.png")%>
       <div class="card-body">
         <%= render post %>
           <p class="card-text"><%= link_to "Show this post", post %></p>

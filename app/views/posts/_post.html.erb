@@ -1,25 +1,16 @@
-<div id="<%= dom_id post %>">
-  <div class="card" style="width: 300px;">
-    <img <%=image_tag("yoga.png")%>
-    <div class="card-body">
-    <h2 class="card-title"><%= post.title %></h2>
-    <h4> by <%= link_to post.user.name, user_path(post.user) %></h4>
-    <h6><%= pluralize(post.views, "view") %></h6>
-    <div class="card-text">
-      <%= post.body %>
+  <div class="col">
+    <div id="<%= dom_id post %>">
+      <div class="card" style="width: 300px">
+        <img <%=image_tag("yoga.png")%>
+        <div class="card-body">
+          <h2 class="card-title"><%= post.title %></h2>
+          <h4> by <%= link_to post.user.name, user_path(post.user) %></h4>
+          <h6><%= pluralize(post.views, "view") %></h6>
+          <div class="card-text">
+            <%= post.body %>
+          </div>
+            <a href="#" class="btn btn-primary stretched-link">View Article</a>
+        </div>
+      </div>
     </div>
-    <%= link_to " ", post %>
   </div>
-</div>
-<%#
-    <a href="#" class="btn btn-primary stretched-link"> </a> %>
-
-  <%# <div id="<%= dom_id post %>
-  <%# <img style="width: 400px;" <%=image_tag("yoga.png")%>
-  <%# <h2><%= post.title %>
-  <%# <h4> by <%= link_to post.user.name, user_path(post.user) %>
-  <%# <h6><%= pluralize(post.views, "view") %>
-  <%# <div>
-    <%= post.body %>
-  <%# </div>
-</div> %>

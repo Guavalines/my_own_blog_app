@@ -22,22 +22,12 @@
     <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
   </div>
 
-  <div class="card">
-    <% Post.limit(2).each do |post| %>
-      <%= render post %>
-    <% end %>
+
+  <div class="row row-cols-2 g-3">
+  <% Post.limit(5).each do |post| %>
+    <%= render post %>
+  <% end %>
   </div>
-
-  <div class="card" style="width: 300px;">
-    <img <%=image_tag("yoga.png")%>
-    <div class="card-body text-center">
-        <h5 class="card-title">Alice Liddel</h5>
-        <p class="card-text">Alice is a freelance web designer and developer based in London. She is specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
-        <a href="#" class="btn btn-primary stretched-link">View Profile</a>
-    </div>
-  </div>
-
-
 </div>
 
 <footer class="bg-dark text-center text-white">
@@ -46,18 +36,8 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/Joel.Pickell" role="button"
         ><i class="fab fa-facebook-f"></i
-      ></a>
-
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
       ></a>
 
       <!-- Instagram -->
@@ -66,12 +46,12 @@
       ></a>
 
       <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/joelpickell/" role="button"
         ><i class="fab fa-linkedin-in"></i
       ></a>
 
       <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Guavalines" role="button"
         ><i class="fab fa-github"></i
       ></a>
     </section>

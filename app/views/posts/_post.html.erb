@@ -9,7 +9,7 @@
           <div class="card-text">
             <%= post.body %>
           </div>
-            <a href="<%= dom_id post %>" class="btn btn-primary stretched-link">View Article</a>
+              <%= link_to "View Article", post_path(post.id), class: 'btn btn-primary stretched-link btn-sm' %>
         </div>
       </div>
     </div>

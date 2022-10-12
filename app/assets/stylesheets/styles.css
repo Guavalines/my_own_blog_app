@@ -67,3 +67,10 @@ html * {
   background-color:rgb(220, 230, 28);
   height:5px;
 }
+
+img {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}

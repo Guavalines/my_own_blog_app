@@ -22,7 +22,7 @@
     <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
   </div>
 
-  <div class="container mt-5">
+  <div class="container mt-5 p-5">
     <div class="row row-cols-2 g-3">
       <% Post.limit(5).each do |post| %>
       <%= render post %>

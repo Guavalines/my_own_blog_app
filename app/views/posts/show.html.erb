@@ -1,5 +1,5 @@
 <div class="container m-5 px-5">
-    <img <%=image_tag("yoga.png")%>
+    <img id="image_show" <%=image_tag("yoga.png")%>
     <h2 class="text-center mt-5"><strong><%= @post.title %></strong></h2>
   <div class="card mt-5">
     <div class="bg-light p-3">
@@ -15,8 +15,8 @@
  <hr>
 
 <div class="container">
-<h2>Discussion</h2>
-<h2><%=@post.comments.count%> Comments</h2>
+<h5><strong>Discussion</strong></h5>
+<h5><%=@post.comments.count%> Comments</h5>
   <%= render 'comments/form',
     post: @post,
     comment: @post.comments.build,

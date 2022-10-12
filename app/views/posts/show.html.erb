@@ -1,14 +1,14 @@
 <div class="container m-5">
-  <div>
+  <div class=card style="width: 600px">
     <img <%=image_tag("yoga.png")%>
-    <div>
-      <h2><%= @post.title %></h2>
-      <h4> by <%= link_to @post.user.name, user_path(@post.user) %></h4>
-      <h6><%= pluralize(@post.views, "view") %></h6>
-      <div>
-        <%= @post.body %>
-      </div>
-    </div>
+  </div>
+  <div>
+    <h2><%= @post.title %></h2>
+    <h5> by <%= link_to @post.user.name, user_path(@post.user) %></h5>
+    <h6><%= pluralize(@post.views, "view") %></h6>
+  </div>
+  <div>
+    <%= @post.body %>
   </div>
 </div>
 

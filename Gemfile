@@ -79,6 +79,4 @@ gem "ransack", "~> 3.2"
 
 gem "friendly_id", "~> 5.4"
 
-# gem "bullet", "~> 7.0"
-
 gem "activerecord-import", "~> 1.4"

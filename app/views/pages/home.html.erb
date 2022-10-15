@@ -1,5 +1,5 @@
 
-<div class="border border-dark border-5 border-top-0 px-5">
+<div class="border border-dark border-5 border-top-0 px-4">
   <div class="text-center">
       <img class="borders border-5 mt-5 mb-3" width="200" <%=image_tag("JoelLW 2.jpg")%>
     </span>
@@ -22,7 +22,7 @@
     <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
   </div>
 
-  <div class="container mt-5 p-5">
+  <div class="container my-5 px-5">
     <div class="row row-cols-2 g-3">
       <% Post.limit(5).each do |post| %>
       <%= render post %>

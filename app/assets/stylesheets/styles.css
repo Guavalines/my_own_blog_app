@@ -54,6 +54,10 @@ html * {
   color:black;
   text-decoration: none;
 } */
+#nav-bottom-decor-0 {
+  background: rgb(28, 230, 186);
+  height:5px;
+}
 
 #nav-bottom-decor-1 {
   background-color:rgb(126, 28, 230);

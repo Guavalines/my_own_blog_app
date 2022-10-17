@@ -2,7 +2,7 @@
     <div id="<%= dom_id post %>">
       <div class="card" style="width: 300px">
         <img <%=image_tag("yoga.png")%>
-        <div class="card-body">
+        <div class="card-body text-center">
           <h2 class="card-title"><%= post.title %></h2>
           <h4> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>
           <h6><%= pluralize(post.views, "view") %></h6>

@@ -28,7 +28,7 @@ a:hover {
   .special-green {
   background: rgb(28, 230, 186);
   display: inline;
-  padding: none;
+  padding: 1px;
   color: #000000;
   box-shadow: none;
   }

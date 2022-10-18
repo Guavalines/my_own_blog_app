@@ -68,6 +68,10 @@ html * {
   height:8px;
 }
 #nav-bottom-decor-3 {
+  background-color:rgb(215, 174, 25);
+  height:8px;
+}
+#nav-bottom-decor-4 {
   background-color:rgb(220, 230, 28);
   height:8px;
 }

@@ -56,20 +56,20 @@ html * {
 } */
 #nav-bottom-decor-0 {
   background: rgb(28, 230, 186);
-  height:5px;
+  height:8px;
 }
 
 #nav-bottom-decor-1 {
   background-color:rgb(126, 28, 230);
-  height:5px;
+  height:8px;
 }
 #nav-bottom-decor-2 {
   background-color:rgb(230, 136, 28);
-  height:5px;
+  height:8px;
 }
 #nav-bottom-decor-3 {
   background-color:rgb(220, 230, 28);
-  height:5px;
+  height:8px;
 }
 
 #image_show {

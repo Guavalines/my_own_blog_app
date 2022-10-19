@@ -1,8 +1,9 @@
 a:link, a:visited {
-  padding: 0px 0px;
+  padding: 1px 1px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  color: #ffffff;
   }
 .navbar-brand, .nav-link {
   color: #ffffff;

@@ -1,16 +1,14 @@
-  <div class="col">
-    <div id="<%= dom_id post %>">
-      <div class="card" style="width: 300px">
-        <img <%=image_tag("yoga.png")%>
-        <div class="card-body text-center">
-          <h2 class="card-title"><%= post.title %></h2>
-          <h5> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>
-          <h6><%= pluralize(post.views, "view") %></h6>
-          <div class="card-text">
-            <%# <%=post.body %>
-          </div>
-              <%= link_to "View Article", post_path(post.id), class: 'btn btn-dark stretched-link btn-sm' %>
-        </div>
+<div class="col-xs-12 col-sm-6 col-lg-4 col-sm-offset-1">
+  <div class="card mb-3">
+    <img <%=image_tag("yoga.png")%>
+    <div class= "card-body">
+      <h4 class="mb-0">
+      <h2 class="card-title"><%= post.title %></h2>
+      </h4>
+      <div class="text-end">
+        <h5> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>
+        <h6><%= pluralize(post.views, "view") %></h6>
       </div>
     </div>
   </div>
+</div>

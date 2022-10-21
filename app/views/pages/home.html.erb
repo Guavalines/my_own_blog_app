@@ -19,13 +19,23 @@
     <h5>Recent Articles</h5>
     <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
   </div>
-  <div class="container my-5 px-5">
-    <div class="row row-cols-2 g-3">
+
+  <div class="container" style="width: 900px;">
+    <div id="posts" class="row row-cols-1 row-cols-md-2 g-4 mt-4 mx-4">
       <% Post.limit(5).each do |post| %>
-      <%= render post %>
+      <div class="card-deck">
+        <div class="col">
+          <div class="card-body">
+            <%= render post %>
+          </div>
+        </div>
+      </div>
       <% end %>
+      <%= link_to "New post", new_post_path %>
     </div>
   </div>
+
+
 </div>
 
 
@@ -47,6 +57,7 @@
     <div class="p-2 bg-primary col-sm-6 flex-grow-1"><h1 class="intro-text mt-4"><span><strong>I'm Joel. I make web apps with <span class="special-green">Ruby on Rails</span><span>, </span><span class="special-green">Javascript</span>, & <span class="special-green">CSS</span>. I also write <span class="special-green">articles</span><span> on </span><span class="special-green">software development</span><span>.</strong></span></h1></div>
   </div>
 <br>
+
 
 
 <%= render "layouts/footer" %>

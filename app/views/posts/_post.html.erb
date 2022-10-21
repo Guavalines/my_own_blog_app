@@ -7,7 +7,7 @@
           <h5> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>
           <h6><%= pluralize(post.views, "view") %></h6>
           <div class="card-text">
-            <%=post.body %>
+            <%# <%=post.body %>
           </div>
               <%= link_to "View Article", post_path(post.id), class: 'btn btn-dark stretched-link btn-sm' %>
         </div>

@@ -27,11 +27,11 @@
                 <img <%=image_tag("yoga.png")%>
                 <div class= "card-body">
                   <h4 class="mb-0">
-                    <%= post.title %>
-                  <h5 class="fs-6 text-muted"> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>
+                    <h2 class="text-center"><%= post.title %></h2>
+                  <h5 class="text-center fs-6 text-muted"> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>
                   </h4>
-                  <div class="text-end">
-                <%= link_to "View Article", post_path(post.id), class: 'btn btn-dark stretched-link btn-sm' %>
+                  <div class="text-center">
+                    <%= link_to "View Article", post_path(post.id), class: 'btn btn-dark stretched-link btn-sm' %>
                   </div>
                 </div>
               </div>

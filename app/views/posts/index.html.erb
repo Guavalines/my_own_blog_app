@@ -4,19 +4,28 @@
 
 <div><%= render 'search/form' %></div>
 
-<div class="container" style="width: 900px;">
-<div id="posts" class="row row-cols-1 row-cols-md-2 g-4 mt-4 mx-4">
-  <% @posts.each do |post| %>
-  <div class="card-deck">
-    <div class="col">
-      <div class="card-body">
-        <%= render post %>
+<div class="container-fluid pe-0">
+  <div class="row me-0">
+    <div class="col-lg-8">
+      <div class="row">
+   <% @posts.each do |post| %>
+          <div class="col-xs-12 col-sm-6 col-lg-4 col-sm-offset-1">
+            <div class="card mb-3">
+              <img <%=image_tag("yoga.png")%>
+              <div class= "card-body">
+                <h4 class="mb-0">
+                  <h2 class="text-center"><%= post.title %></h2>
+                <h5 class="text-center fs-6 text-muted"> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>
+                </h4>
+                <div class="text-center">
+                  <%= link_to "View Article", post_path(post.id), class: 'btn btn-dark stretched-link btn-sm' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
-  <% end %>
-  <%= link_to "New post", new_post_path %>
-</div>
-</div>
 
 <%= render "layouts/footer" %>

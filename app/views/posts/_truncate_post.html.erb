@@ -1,0 +1,16 @@
+<div class="col">
+  <div id="<%= dom_id post %>">
+    <div class="card" style="width: 300px">
+      <img <%=image_tag("yoga.png")%>
+      <div class="card-body text-center">
+        <h2 class="card-title"><%= post.title %></h2>
+        <h5> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>
+        <h6><%= pluralize(post.views, "view") %></h6>
+        <div class="card-text">
+          <%= post.body.to_plain_text.truncate(20) %>
+        </div>
+            <%= link_to "View Article", post_path(post.id), class: 'btn btn-dark stretched-link btn-sm' %>
+      </div>
+    </div>
+  </div>
+</div>

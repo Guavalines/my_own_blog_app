@@ -13,7 +13,9 @@ a:hover {
 }
 .nav-link:hover {
   color: rgb(28, 230, 186);
+  text-decoration: none;
   }
+
 
   hr {
   size: 4;

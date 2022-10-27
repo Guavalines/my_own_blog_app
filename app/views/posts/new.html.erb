@@ -1,4 +1,4 @@
-<div class="container mt-2">
+<div class="container my-4">
   <h2>new post</h2>
 
   <%= render "form", post: @post %>
@@ -6,7 +6,7 @@
   <br>
 
   <div>
-  <%= link_to "Back to posts", posts_path %>
+  <%= link_to "Back to Articles", posts_path, class: "btn btn-dark" %>
   </div>
 </div>
 <%= render 'layouts/footer' %>

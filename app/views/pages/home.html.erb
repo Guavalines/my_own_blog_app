@@ -28,7 +28,7 @@
           <% Post.limit(5).each do |post| %>
           <div class="col-xs-12 col-sm-6 col-lg-4 col-sm-offset-1">
             <div class="card mb-3">
-              <img id="image_show" <%= image_tag url_for(post.photo) %>
+              <%= image_tag url_for(post.photo), class: "img-fluid", height: 320, width: 300, crop: :fill %>
               <div class= "card-body">
                 <h4 class="mb-0">
                 <h2 class="text-center"><%= post.title %></h2>

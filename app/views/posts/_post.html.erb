@@ -1,6 +1,7 @@
 <div class="col-xs-12 col-sm-6 col-lg-4 col-sm-offset-1">
   <div class="card mb-3">
-    <img <%=image_tag("yoga.png")%>
+    <%# <img <%=image_tag("yoga.png")%>
+    <%= image_tag @post.photo, class: "img-fluid mb-3", height: 600, width: 1200, crop: :fill %>
     <div class= "card-body">
       <h4 class="mb-0">
       <h2 class="card-title"><%= post.title %></h2>

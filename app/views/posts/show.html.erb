@@ -1,5 +1,5 @@
 <div class="container m-5 px-5">
-    <img id="image_show" <%=image_tag("yoga.png")%>
+    <img id="image_show" <%= image_tag url_for(@post.photo) %>
     <h2 class="text-center mt-5"><strong><%= @post.title %></strong></h2>
   <div class="card mt-5">
     <div class="bg-light p-3">
@@ -27,7 +27,6 @@
     comment: comment %>
   <% end %>
 </div>
-
 
 
 <div class="container my-5">

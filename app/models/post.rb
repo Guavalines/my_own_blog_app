@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   # belongs_to :category
 
   has_many_attached :images
+  has_one_attached :photo
 
   belongs_to :user
   has_many :comments, dependent: :destroy

@@ -1,19 +1,15 @@
+<%# <----------------post-----------------> %>
 <div class="container m-5 px-5">
-    <img id="image_show" <%= image_tag url_for(@post.photo) %>
-    <h2 class="text-center mt-5"><strong><%= @post.title %></strong></h2>
+  <img id="image_show" <%= image_tag url_for(@post.photo) %>
+  <h2 class="text-center mt-5"><strong><%= @post.title %></strong></h2>
   <div class="card mt-5">
     <div class="bg-light p-3">
-      <p class="border-start fst-italic ps-3">
-      <div>
-        <%= @post.body %>
-      </div>
-      </p>
+      <p class="border-start fst-italic ps-3"><%= @post.body %></p>
     </div>
   </div>
 </div>
-
- <hr>
-
+<hr>
+<%# <--------------comments form-----------> %>
 <div class="container">
 <h5><strong>Discussion</strong></h5>
 <h5><%=@post.comments.count%> Comments</h5>
@@ -27,8 +23,7 @@
     comment: comment %>
   <% end %>
 </div>
-
-
+<%# <-------------buttons------------> %>
 <div class="container my-5">
   <%= link_to "Edit this post", edit_post_path(@post),
       class: "btn btn-small btn-dark my-2" %> |

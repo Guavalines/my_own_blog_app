@@ -9,18 +9,13 @@
       </ul>
     </div>
   <% end %>
-
   <div class="form-group">
     <% if post.photo.attached? %>
       <%= image_tag post.photo, style: "width: 200px; display: block" %>
       <% end %>
-
     <%= form.label :photo %>
     <%= form.file_field :photo, class: "form-control" %>
   </div>
-
-
-
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>

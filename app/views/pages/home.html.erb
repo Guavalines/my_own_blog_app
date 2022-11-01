@@ -1,49 +1,49 @@
-<div class="container my-3">
-<%# <-----------------Main Image-------------------> %>
-<div class="container my-4">
-  <div class="row">
-    <div class="col-sm-6 d-flex justify-content-start">
-      <img class="borders mt-5 mb-0" width="250" <%=image_tag("JoelLW 2.jpg")%>
-    </div>
-    <div class="col-sm-6 d-flex justify-content-start">
-      <div class="p-2 col-sm-6 flex-grow-1"><h1 class="intro-text mt-4">
-        <span><strong>I'm Joel. I make web apps with <span class="special-green">Ruby on Rails</span><span>, </span><span class="special-green">Javascript</span>, & <span class="special-green">CSS</span>. I also write <span class="special-green">articles</span><span> on </span><span class="special-green">software development</span><span>.</strong></span></h1>
+<div class="container my-3 pt-1">
+  <%# <-----------------Main Image-------------------> %>
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-sm-6 d-flex justify-content-start">
+        <img class="borders mt-5 mb-0" width="250" <%=image_tag("JoelLW 2.jpg")%>
+      </div>
+      <div class="col-sm-6 d-flex justify-content-start">
+        <div class="p-2 col-sm-6 flex-grow-1"><h1 class="intro-text mt-4">
+          <span><strong>I'm Joel. I make web apps with <span class="special-green">Ruby on Rails</span><span>, </span><span class="special-green">Javascript</span>, & <span class="special-green">CSS</span>. I also write <span class="special-green">articles</span><span> on </span><span class="special-green">software development</span><span>.</strong></span></h1>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<%# <-----------------Main Image-------------------> %>
+  <%# <-----------------Main Image-------------------> %>
 
-<%# <--------------------------Posts Index Button-------------------> %>
-<div class="container mb-4 mt-4">
-  <h5>Recent Articles</h5>
-  <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
-</div>
-<%# <--------------------------Posts Index Button-------------------> %>
+  <%# <--------------------------Posts Index Button-------------------> %>
+  <div class="container mb-4 mt-4">
+    <h5>Recent Articles</h5>
+    <%= link_to "view all ->", posts_path, class: "btn btn-dark" %>
+  </div>
+  <%# <--------------------------Posts Index Button-------------------> %>
 
-<%# <------------------------Post Card Grid--------------------------> %>
-<div class="container-fluid pe-0">
-  <div class="row me-0">
-    <div class="col-lg-12">
-      <div class="row">
-        <% Post.limit(5).each do |post| %>
-        <div class="col-xs-12 col-sm-6 col-lg-4 col-sm-offset-1">
-          <div class="card mb-3">
-            <%= image_tag url_for(post.photo), class: "img-fluid", height: 320, width: 300, crop: :fill %>
-            <div class= "card-body">
-              <h2 class="text-center"><%= post.title %></h2>
-              <h5 class="text-center fs-6 text-muted"> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h5>
-              <div class="text-center">
-                <%= link_to "View Article", post_path(post.id), class: 'btn btn-dark stretched-link btn-sm' %>
+  <%# <------------------------Post Card Grid--------------------------> %>
+  <div class="container-fluid pe-0 pb-4">
+    <div class="row me-0">
+      <div class="col-lg-12">
+        <div class="row">
+          <% Post.limit(5).each do |post| %>
+          <div class="col-xs-12 col-sm-6 col-lg-4 col-sm-offset-1">
+            <div class="card mb-3">
+              <%= image_tag url_for(post.photo), class: "img-fluid", height: 320, width: 300, crop: :fill %>
+              <div class= "card-body">
+                <h2 class="text-center"><%= post.title %></h2>
+                <h5 class="text-center fs-6 text-muted"> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h5>
+                <div class="text-center">
+                  <%= link_to "View Article", post_path(post.id), class: 'btn btn-dark stretched-link btn-sm' %>
+                </div>
               </div>
             </div>
           </div>
+          <% end %>
         </div>
-        <% end %>
       </div>
     </div>
   </div>
-</div>
 </div>
 <%# <------------------------Post Card Grid--------------------------> %>
 <%= render 'layouts/footer' %>

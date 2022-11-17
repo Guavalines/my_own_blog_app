@@ -1,15 +1,15 @@
-<h1 class="text-center"><%= pluralize(@posts.count, "Result") %></h1>
-<div class="container mb-4">
+<div class="container my-5 pt-5">
+  <h1 class="text-center"><%= pluralize(@posts.count, "Result") %></h1>
   <table class="table table-light table-striped">
     <thead>
       <tr>
-      <th><%= sort_link(@query, :title, "Title", default_order: :asc, class:"black") %></th>
-      <th><%= sort_link(@query, :body, "Blog Content", class:"black") %></th>
-      <th><%= sort_link(@query, :user_name, "Users", class:"black") %></th>
+        <th><%= sort_link(@query, :title, "Title", default_order: :asc, class:"black") %></th>
+        <th><%= sort_link(@query, :body, "Blog Content", class:"black") %></th>
+        <th><%= sort_link(@query, :user_name, "Users", class:"black") %></th>
       </tr>
     </thead>
     <tbody>
-          <% @posts.each do |post| %>
+      <% @posts.each do |post| %>
         <tr>
           <td><%= link_to post.title, post %></td>
           <td><%= post.body.to_plain_text.truncate_words(25) %></td>
@@ -18,8 +18,8 @@
       <% end %>
     </tbody>
   </table>
-  </div>
-
-   <div class="container mb-2">
+  <div class="container mb-2">
     <%= link_to "back to search", posts_path, class: "btn btn-dark" %>
   </div>
+</div>
+<%= render 'layouts/footer' %>

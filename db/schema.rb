@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_22_052020) do
   enable_extension "plpgsql"
 
   create_table "action_text_rich_texts", force: :cascade do |t|
-    t.string "name", null: false
+    t.text "name", null: false
     t.text "body"
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -62,10 +62,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_22_052020) do
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string "slug", null: false
+    t.text "slug", null: false
     t.integer "sluggable_id", null: false
-    t.string "sluggable_type", limit: 50
-    t.string "scope"
+    t.text "sluggable_type"
+    t.text "scope"
     t.datetime "created_at"
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
@@ -75,8 +75,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_22_052020) do
   create_table "notifications", force: :cascade do |t|
     t.string "recipient_type", null: false
     t.bigint "recipient_id", null: false
-    t.string "type", null: false
-    t.json "params"
+    t.text "type", null: false
+    t.jsonb "params"
     t.datetime "read_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -85,7 +85,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_22_052020) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "title"
+    t.text "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "views", default: 0
@@ -97,9 +97,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_22_052020) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
+    t.text "email", default: "", null: false
+    t.text "encrypted_password", default: "", null: false
+    t.text "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false

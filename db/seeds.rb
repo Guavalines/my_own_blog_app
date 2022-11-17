@@ -15,8 +15,8 @@ User.create(email: 'john@doe.com',
             password_confirmation: 'password',
             name: 'John Doe')
 
-  posts = []
-  comments = []
+  posts = ()
+  comments = ()
 
   elapsed = Benchmark.measure do
   10.times do |x|

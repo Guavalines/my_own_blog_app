@@ -84,3 +84,5 @@ gem "activerecord-import", "~> 1.4"
 gem "dotenv-rails", groups: [:development, :test]
 
 gem "cloudinary"
+
+gem 'simple_form'

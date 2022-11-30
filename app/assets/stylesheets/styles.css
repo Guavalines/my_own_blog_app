@@ -109,3 +109,33 @@ img {
   width: 200px;
   border-radius: 1%
 }
+
+.col1 {
+  background-image: url('Woofpal Banner.jpeg');
+  background-repeat:none;
+  background-size:contain;
+  height: 285px;
+  width: 300px;
+  font-size: 12px;
+}
+.col2 {
+  background-image: url('Share-a-Dog-Banner.jpg');
+  background-repeat:none;
+  background-size:contain;
+  height: 285px;
+  width: 300px;
+  font-size: 12px;
+}
+
+/* Image To Text On Hover */
+
+.hovtxt {
+  background:white;
+  opacity:0;
+  transition-duration: .8s;
+  transition-timing-function: ease-in-out;
+}
+
+.hovtxt:hover {
+  opacity: .85;
+}

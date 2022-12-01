@@ -32,4 +32,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get 'portfolio', to: 'pages#portfolio'
+
+  # get 'users', to: 'sessions#signout'
+  # devise_for :users
 end

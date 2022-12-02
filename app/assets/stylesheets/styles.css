@@ -154,8 +154,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: white;
+  color: rgba(0, 0, 0, 0.6);
   font-family: arial;
   display: flex;
   flex-direction: column;

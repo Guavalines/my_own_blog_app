@@ -5,7 +5,7 @@ a:link, a:visited {
   display: inline-block;
   }
 .navbar-brand, .nav-link {
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
 }
 
 a:hover {
@@ -189,4 +189,8 @@ img {
 
 .card {
   position: relative;
+}
+
+#lb {
+  color: #000000;
 }

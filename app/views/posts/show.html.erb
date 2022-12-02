@@ -13,6 +13,20 @@
   </div>
 </div>
 <hr>
+
+<%# <--------------sign in-----------> %>
+<div class="container">
+  <p> If you would like to comment, please sign in first. </p>
+    <%= link_to "login/sign up", user_session_path, class: "btn btn-dark" %>
+</div>
+
+  <%= render 'layouts/notifications' %>
+  <%= render 'user/session_manager' %>
+<br>
+
+<%# <--------------sign in-----------> %>
+
+
 <%# <--------------comments form-----------> %>
 <div class="container">
 <h5><strong>Discussion</strong></h5>
@@ -27,6 +41,8 @@
     comment: comment %>
   <% end %>
 </div>
+<%# <--------------comments form-----------> %>
+
 <%# <-------------buttons------------> %>
 <div class="container my-5">
   <%= link_to "Edit this article", edit_post_path(@post),
@@ -36,4 +52,6 @@
   <%= button_to "Destroy this article", @post, method: :delete,
       class: "btn btn-small btn-danger p-0" %>
 </div>
+<%# <-------------buttons------------> %>
+
 <%= render 'layouts/footer' %>

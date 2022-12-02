@@ -46,4 +46,7 @@
   </div>
 </div>
 <%# <------------------------Post Card Grid--------------------------> %>
+
+<%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete %>
+
 <%= render 'layouts/footer' %>

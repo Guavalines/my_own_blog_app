@@ -1,57 +1,63 @@
-<%# <----------------post-----------------> %>
-<div class="container m-5 px-5">
-  <img id="image_show" <%= image_tag url_for(@post.photo) %>
-  <h1 class="text-center mt-5 mb-0"><strong><%= @post.title %></strong></h1>
-    <div class="text-center">
-      <p class="mb-0"> by <%= link_to @post.user.name, user_path(@post.user), class:"black" %></p>
-      <h6 class="mt-0"><%= pluralize(@post.views, "view") %></h6>
-    </div>
-  <div class="card mt-5">
-    <div class="bg-light p-3">
-      <p class="border-start fst-italic ps-3"><%= @post.body %></p>
+<div class="container mt-5 pt-2">
+
+  <%# <----------------post-----------------> %>
+  <div class="container m-5 px-5">
+    <img id="image_show" <%= image_tag url_for(@post.photo) %>
+    <h1 class="text-center mt-5 mb-0"><strong><%= @post.title %></strong></h1>
+      <div class="text-center">
+        <p class="mb-0"> by <%= link_to @post.user.name, user_path(@post.user), class:"black" %></p>
+        <h6 class="mt-0"><%= pluralize(@post.views, "view") %></h6>
+      </div>
+    <div class="card mt-5">
+      <div class="bg-light p-3">
+        <p class="border-start fst-italic ps-3"><%= @post.body %></p>
+      </div>
     </div>
   </div>
+  <hr>
+
+  <%# <--------------sign in-----------> %>
+  <div class="container">
+    <p> If you would like to comment, please sign in first. </p>
+      <%= link_to "login/sign up", user_session_path, class: "btn btn-dark" %>
+  </div>
+  <div>
+    <%= render 'layouts/notifications' %>
+    <%= render 'user/session_manager' %>
+  </div>
+
+  <br>
+
+  <%# <--------------sign in-----------> %>
+
+
+  <%# <--------------comments form-----------> %>
+  <div class="container">
+  <h5><strong>Discussion</strong></h5>
+  <h5><%=@post.comments.count%> Comments</h5>
+    <%= render 'comments/form',
+      post: @post,
+      comment: @post.comments.build,
+      submit_label: "Reply" %>
+    <% @comments.each do |comment| %>
+      <%= render 'comments/comment',
+      post: @post,
+      comment: comment %>
+    <% end %>
+  </div>
+  <%# <--------------comments form-----------> %>
+
+  <%# <-------------buttons------------> %>
+  <div class="container my-5">
+    <%= link_to "Edit this article", edit_post_path(@post),
+        class: "btn btn-small btn-dark my-2" %> |
+    <%= link_to "Back to articles", posts_path,
+        class: "btn btn-small btn-dark my-2" %>
+    <%= button_to "Destroy this article", @post, method: :delete,
+        class: "btn btn-small btn-danger p-0" %>
+  </div>
+  <%# <-------------buttons------------> %>
+
 </div>
-<hr>
-
-<%# <--------------sign in-----------> %>
-<div class="container">
-  <p> If you would like to comment, please sign in first. </p>
-    <%= link_to "login/sign up", user_session_path, class: "btn btn-dark" %>
-</div>
-
-  <%= render 'layouts/notifications' %>
-  <%= render 'user/session_manager' %>
-<br>
-
-<%# <--------------sign in-----------> %>
-
-
-<%# <--------------comments form-----------> %>
-<div class="container">
-<h5><strong>Discussion</strong></h5>
-<h5><%=@post.comments.count%> Comments</h5>
-  <%= render 'comments/form',
-    post: @post,
-    comment: @post.comments.build,
-    submit_label: "Reply" %>
-  <% @comments.each do |comment| %>
-    <%= render 'comments/comment',
-    post: @post,
-    comment: comment %>
-  <% end %>
-</div>
-<%# <--------------comments form-----------> %>
-
-<%# <-------------buttons------------> %>
-<div class="container my-5">
-  <%= link_to "Edit this article", edit_post_path(@post),
-      class: "btn btn-small btn-dark my-2" %> |
-  <%= link_to "Back to articles", posts_path,
-      class: "btn btn-small btn-dark my-2" %>
-  <%= button_to "Destroy this article", @post, method: :delete,
-      class: "btn btn-small btn-danger p-0" %>
-</div>
-<%# <-------------buttons------------> %>
 
 <%= render 'layouts/footer' %>

@@ -204,3 +204,7 @@ body{
 footer{
   margin-top: auto;
 }
+
+#footer-list {
+  padding: 2px;
+}

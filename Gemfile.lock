@@ -76,6 +76,7 @@ GEM
     bootsnap (1.14.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cancancan (1.17.0)
     capybara (3.38.0)
       addressable
       matrix
@@ -282,6 +283,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-import (~> 1.4)
   bootsnap
+  cancancan (~> 1.15)
   capybara
   cloudinary
   debug
@@ -309,4 +311,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.2.32
+   2.3.26

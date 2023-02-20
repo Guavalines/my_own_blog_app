@@ -86,3 +86,5 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 
 gem 'simple_form'
+
+gem 'cancancan', '~> 1.15'

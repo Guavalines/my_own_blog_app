@@ -211,3 +211,10 @@ footer{
 #footer-list {
   padding: 2px;
 }
+
+button {
+  margin-left: 42px;
+  border-color: lightcoral;
+  border-radius: 8px;
+  text-decoration: none;
+}

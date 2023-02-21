@@ -18,15 +18,8 @@
 
   <%# <--------------sign in-----------> %>
   <div class="container">
-    <p> If you would like to comment, please sign in first. </p>
-      <%= link_to "login/sign up", user_session_path, class: "btn btn-dark" %>
+    <p> If you would like to comment, please sign in first. <%= link_to "login/sign up", new_user_session_path, class: "btn btn-dark" %></p>
   </div>
-  <div>
-    <%= render 'layouts/notifications' %>
-    <%= render 'user/session_manager' %>
-  </div>
-
-<%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete %>
 
   <br>
 

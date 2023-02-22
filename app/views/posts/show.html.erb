@@ -2,7 +2,7 @@
 
   <%# <----------------post-----------------> %>
   <div class="container m-5 px-5">
-    <img id="image_show" <%= image_tag url_for(@post.photo) %>
+    <%= cl_image_tag @post.photo.key %>
     <h1 class="text-center mt-5 mb-0"><strong><%= @post.title %></strong></h1>
       <div class="text-center">
         <p class="mb-0"> by <%= link_to @post.user.name, user_path(@post.user), class:"black" %></p>

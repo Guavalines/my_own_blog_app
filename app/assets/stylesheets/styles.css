@@ -211,3 +211,11 @@ footer{
 #footer-list {
   padding: 2px;
 }
+
+#comment-text {
+  text-align: center;
+}
+
+a.green-link-to{
+  color: #000;
+ }

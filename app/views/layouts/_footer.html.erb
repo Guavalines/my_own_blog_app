@@ -1,55 +1,6 @@
 <footer class="text-center text-lg-start bg-dark text-light slanted">
-  <section class="d-flex justify-content-center justify-content-lg-between p-4">
-    <div class="text-center">
-      <h3 class="intro-text"><span>I'm Joel. I make web apps with <span class="special-green">Ruby on Rails</span><span>, </span><span class="special-green">Javascript</span>, & <span class="special-green">CSS</span>. I also write <span class="special-green">articles</span><span> on </span><span class="special-green">software development</span><span>.</span></h3>
-    </div>
-  </section>
-
-  <section id="footer-list">
-    <div class="container text-center mt-1">
-      <div class="row mt-3">
-
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
-          <h6 class="text-uppercase fw-bold mb-4 text-white">Menu</h6>
-          <p><%= link_to "About", about_path, class: "text-light" %></p>
-          <p><%= link_to "Articles", posts_path, class: "text-light" %></p>
-        </div>
-
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
-          <h6 class="text-uppercase fw-bold mb-4 text-white">Contact</h6>
-          <p><a href="#!" class="text-white">Email</a></p>
-        </div>
-
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
-          <h6 class="text-uppercase fw-bold mb-4 text-white">Social</h6>
-          <p><a href="https://www.facebook.com/Joel.Pickell" class="text-white">Facebook</a></p>
-          <p><a href="https://www.linkedin.com/in/joelpickell/" class="text-white">Linkedin</a></p>
-          <p><a href="https://github.com/Guavalines" class="text-white">Github</a></p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- Copyright -->
-  <div class="text-center p-1 text-dark" style="background-color: rgb(28, 230, 186);">
-    © joelpickell . 2022 . Built with Rails . Open sourced on <span><i class="fa-brands fa-github"></i></span> . Deployed on Heroku .
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-
-
-
-<%# <----------------------------------New Footer Below---------------------------------------------------> %>
-
-<!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
-
-  <!-- Footer -->
-<footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
   <div class="container p-4">
-    <!-- Section: Social media -->
+   <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
       <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/Joel.Pickell" role="button"
@@ -57,7 +8,7 @@
       ></a>
 
       <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="mailto:pickelljoel@gmail.com" role="button"
         ><i class="fab fa-google"></i
       ></a>
 
@@ -78,63 +29,33 @@
         <h3 class="intro-text"><span>I'm Joel. I make web apps with <span class="special-green">Ruby on Rails</span><span>, </span><span class="special-green">Javascript</span>, & <span class="special-green">CSS</span>. I also write <span class="special-green">articles</span><span> on </span><span class="special-green">software development</span><span>.</span></h3>
     </section>
     <!-- Section: Text -->
-
-    <!-- Section: Links -->
-    <section class="">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Menu</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <%= link_to "About", about_path, class: "text-light" %>
-            </li>
-            <li>
-              <%= link_to "Articles", posts_path, class: "text-light" %>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <%# <div class="col-lg-3 col-md-6 mb-4 mb-md-0"> %>
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
-          <h5 class="text-uppercase">Contact</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="mailto:pickelljoel@gmail.com" class="text-white">Email</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Social</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="https://www.facebook.com/Joel.Pickell" class="text-white">Facebook</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/joelpickell/" class="text-white">Linkedin</a>
-            </li>
-            <li>
-              <p><a href="https://github.com/Guavalines" class="text-white">Github</a></p>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
   </div>
-  <!-- Grid container -->
 
+  <section id="footer-list">
+    <div class="container text-center mt-1">
+      <div class="row mt-3">
+
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
+          <h6 class="text-uppercase fw-bold mb-4 text-white">Menu</h6>
+          <p><%= link_to "About", about_path, class: "text-light" %></p>
+          <p><%= link_to "Articles", posts_path, class: "text-light" %></p>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
+          <h6 class="text-uppercase fw-bold mb-4 text-white">Contact</h6>
+          <p><a href="mailto:pickelljoel@gmail.com" class="text-white">Email</a></p>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
+          <h6 class="text-uppercase fw-bold mb-4 text-white">Social</h6>
+          <p><a href="https://www.facebook.com/Joel.Pickell" class="text-white">Facebook</a></p>
+          <p><a href="https://www.linkedin.com/in/joelpickell/" class="text-white">Linkedin</a></p>
+          <p><a href="https://github.com/Guavalines" class="text-white">Github</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
   <!-- Copyright -->
   <div class="text-center p-1 text-dark" style="background-color: rgb(28, 230, 186);">
     © joelpickell . 2022 . Built with Rails . Open sourced on <span><i class="fa-brands fa-github"></i></span> . Deployed on Heroku .
@@ -142,6 +63,3 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
-
-</div>
-<!-- End of .container -->

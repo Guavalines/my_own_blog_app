@@ -6,7 +6,8 @@
     </a>
     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
         <li><%= link_to "Admin", admin_path, class:"dropdown-item" if current_user.admin? %></li>
-        <% if can? :create, @post %>
+        <%# <% if can? :create, @post %>
+        <% if current_user && current_user.admin %>
         <li><%= link_to "New Post", new_post_path, class:"dropdown-item" %></li>
         <% end %>
         <li><%= link_to "Posts", posts_path, class:"dropdown-item" %></li>

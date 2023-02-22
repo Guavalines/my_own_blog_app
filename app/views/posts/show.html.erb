@@ -17,8 +17,8 @@
   <hr>
 
   <%# <--------------sign in-----------> %>
-  <div class="container">
-    <p> If you would like to comment, please sign in first. <%= link_to "login/sign up", new_user_session_path, class: "btn btn-dark" %></p>
+  <div id="comment-text">
+    <p> If you would like to comment, please first <%= link_to "login", new_user_session_path, class: "btn btn-secondary btn-sm" %> or <%= link_to "signup", new_user_registration_path, class: "btn btn-dark btn-sm" %></p>
   </div>
 
   <br>

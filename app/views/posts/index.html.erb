@@ -12,6 +12,7 @@
           <div class="col-xs-12 col-sm-6 col-lg-4 col-sm-offset-1">
             <div class="card mb-3">
               <%= image_tag url_for(post.photo), class: "img-fluid", height: 320, width: 300, crop: :fill %>
+              <%# <%= cl_image_tag @post.photo.key, class: "img-fluid", height: 320, width: 300, crop: :fill %>
               <div class= "card-body mb-0">
                 <h2 class="text-center"><%= post.title %></h2>
                 <h4 class="text-center fs-6 text-muted"> by <%= link_to post.user.name, user_path(post.user), class:"black" %></h4>

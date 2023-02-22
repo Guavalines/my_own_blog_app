@@ -46,11 +46,12 @@
   <div class="container my-5">
     <%= link_to "Back to articles", posts_path,
         class: "btn btn-small btn-dark my-2" %>
-    <% if can? :update, @post %>
+
+    <%# <% if can? :update, @post %>
+
+  <% if current_user && current_user.admin %>
     <%= link_to "Edit this article", edit_post_path(@post),
         class: "btn btn-small btn-dark my-2" %> |
-    <% end %>
-    <% if can? :destroy, @post %>
     <%= button_to "Destroy this article", @post, method: :delete,
         class: "btn btn-small btn-danger p-0" %>
     <% end %>

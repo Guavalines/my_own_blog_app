@@ -3,44 +3,19 @@
   <p> Here are a few of my past projects:</p>
 </div>
 
-<div class="container">
-  <div class="row">
-
-<%# <-----------------------WOOFPAL CARD-----------------------> %>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <a href="http://www.woofpal.xyz/">
-        <div class="card">
-          <div class="image">
-            <img src="<%= asset_path('Woofpal Banner.jpeg') %>", alt="Woofpal Image" >
-            <div class="image__overlay image__overlay--blur ">
-              <p class="image__description">
-                <strong>Woof-Pal</strong> is a web app myself and 2 other developers created to give new dog owners a unique veterinarian-approved deworming, vaccinations, & grooming schedule based on the dog's age. Next, it syncs this schedule to their Google Calendar. Coding highlights: Image upload with Cloudinary. Click to visit the site.
-              </p>
-            </div>
-          </div>
-        </div>
-      </a>
+<div class="card-container">
+  <a href="http://www.woofpal.xyz/" class="card-link">
+    <div class="p-card">
+      <img src="<%= asset_path('Woofpal Banner.jpeg') %>" alt="Image 1">
+      <img src="<%= asset_path('woof-bg.jpeg') %>" alt="Image 1" class="hover-image">
     </div>
-<%# <-----------------------WOOFPAL CARD-----------------------> %>
-
-<%# <-----------------------SHARE-a-DOG CARD-----------------------> %>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <a href="http://www.shareadog.net/">
-        <div class="card">
-          <div class="image">
-            <img src="<%= asset_path('Share-a-Dog-Banner.jpg') %>", alt="Share-a-Dog Image" >
-            <div class="image__overlay image__overlay--blur ">
-              <p class="image__description">
-                <strong>Share-a-Dog</strong> app is an AirBnB clone, designed to help pet owners list their dog, and to help pet-renters choose the perfect dog to rent from these listings. Coding highlights include: Image upload with an external Rails service Cloudinary, plus a map with an external Rails service Mapbox. Click here to visit the site.
-              </p>
-            </div>
-          </div>
-        </div>
-      </a>
+  </a>
+  <a href="http://www.shareadog.net/" class="card-link">
+    <div class="p-card">
+      <img src="<%= asset_path('Share-a-Dog-Banner.jpeg') %>" alt="Image 2">
+      <img src="<%= asset_path('share-bg.jpeg') %>" alt="Image 2" class="hover-image">
     </div>
-<%# <-----------------------SHARE-a-DOG CARD-----------------------> %>
-
-  </div>
+  </a>
 </div>
 
 <br>

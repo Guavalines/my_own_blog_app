@@ -219,3 +219,45 @@ footer{
 a.green-link-to{
   color: #000;
  }
+
+
+ /* <------------------------experimental------------------> */
+
+ .card-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.card-link {
+  margin: 10px;
+}
+
+.p-card {
+  border: 1px solid lightgray;
+  padding: 10px;
+  position: relative;
+}
+
+.p-card img.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.p-card:hover img:not(.hover-image) {
+  opacity: 0;
+}
+
+.p-card:hover img.hover-image {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

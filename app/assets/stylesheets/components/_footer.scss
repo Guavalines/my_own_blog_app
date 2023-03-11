@@ -1,0 +1,20 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer{
+  margin-top: auto;
+}
+
+#footer-list {
+  padding: 2px;
+}
+
+#comment-text {
+  text-align: center;
+}
+
+a.green-link-to{
+  color: #000;
+ }

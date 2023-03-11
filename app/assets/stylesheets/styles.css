@@ -113,11 +113,6 @@ img {
   border-radius: 1%
 }
 
-/* .container {
-  position: relative;
-  width: 50%;
-} */
-
 .image {
   display: block;
   width: 100%;
@@ -199,7 +194,7 @@ img {
 }
 
 /* <----------------FOOTER-----------------------> */
-body{
+/* body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -218,7 +213,7 @@ footer{
 
 a.green-link-to{
   color: #000;
- }
+ } */
 
 
  /* <------------------------experimental------------------> */

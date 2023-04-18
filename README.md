@@ -1,5 +1,5 @@
 # Description
-This is personal blog I developed to display my portfolio and tech-related articles I've written.
+This is a personal blog I developed to display my portfolio and tech-related articles I've written.
 
 # Features
 - User accounts and CRUD for comments

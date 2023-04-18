@@ -1,3 +1,5 @@
+[www.joelpickell.com](http://www.joelpickell.com/)
+
 # Description
 This is a personal blog I developed to display my portfolio and tech-related articles I've written.
 

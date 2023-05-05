@@ -1,6 +1,6 @@
 # PERSONAL BLOG
 
-# [www.joelpickell.com](http://www.joelpickell.com/)
+# [www.joelpickell.com](http://www.joelpickell.com/) ☜ see it here
 
 # Description
 This is a personal blog I developed to display my portfolio and tech-related articles I've written.

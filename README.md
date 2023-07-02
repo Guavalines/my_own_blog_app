@@ -1,4 +1,4 @@
-# PERSONAL BLOG
+# 🤓 PERSONAL BLOG
 
 # [www.joelpickell.com](http://www.joelpickell.com/) ☜ see it here
 
